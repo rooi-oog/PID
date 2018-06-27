@@ -1,3 +1,4 @@
+#include "config.h"
 #include "pid.h"
 
 static uint8_t pid_reset_flag = 0;
