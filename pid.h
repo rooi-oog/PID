@@ -8,7 +8,7 @@
 #define INTEGER_PART				(1 << FIXED_POINT_POSITION)
 
 #ifndef LIMIT
-#ifdef TWO_DIRECTIONAL
+#ifdef BIDIRECTIONAL
 #define LIMIT(l,val)				val > l ? l : val < -l ? -l : val
 #else
 #define LIMIT(l,val)				val > l ? l : val <  0 ?  0 : val
@@ -57,8 +57,8 @@ void pid_set_point (arm_pid_t *, int32_t);
 void pid_set_parameters (arm_pid_t *, int32_t, uint8_t);
 void pid_reset (arm_pid_t *);
 void pid_set_mode (arm_pid_t *, uint8_t);
-void pid_set_sub_cmd (arm_pid_t *, int32_t);
-void pid_set_PWM (arm_pid_t *, int32_t);
+void pid_set_subcmd (arm_pid_t *, int32_t);
+void pid_set_pwm (arm_pid_t *, int32_t);
 void pid_update (arm_pid_t *, uint8_t);
 
 #endif /* __PID_H__ */
